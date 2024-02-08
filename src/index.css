@@ -43,3 +43,22 @@ span {
   color: #fff;
   /* background-color: #fff; */
 }
+
+
+.ace_gutter-layer {
+  background-color: #4a4a4a;
+}
+
+.ace_folding-enabled {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+/* .ace_gutter-cell{
+  background-color: #3b3b3b;
+  color: #fff;
+} */
+.ace_gutter-active-line {
+  color: #3b3b3b;
+  font-weight: bold;
+}
