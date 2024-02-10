@@ -26,6 +26,12 @@ const CustomAceEditor = ({
     if (editorRef.current) {
       const aceEditor = editorRef.current.editor;
       aceEditor.session.setUseWorker(false);
+      aceEditor.setOptions({
+        autoIndent: false, // Disable auto-indentation
+        enableBasicAutocompletion: false, // Disable auto-completion
+        enableLiveAutocompletion: false, // Disable live auto-completion
+        highlightActiveLine: false, // Disable highlighting of the active line
+      });
     }
   }, []);
 
@@ -33,7 +39,7 @@ const CustomAceEditor = ({
     <AceEditor
       ref={editorRef}
       mode={mode}
-        theme={theme}
+      theme={theme}
       height={height}
       width={width}
       style={{ ...sx }}

@@ -35,16 +35,8 @@ const Editor = () => {
     setLanguage(event.target.value);
     alert(language);
   };
-
-  // const handleCodeChange = (event) => {
-  //   setCode(event.target.value);
-  // };
-
   const handleEditor = () => {
-    alert(language);
-    console.log(code);
     const newOutput = Compile({ language, code });
-    console.log(newOutput);
     setOutput(newOutput);
   };
   return (
@@ -58,10 +50,6 @@ const Editor = () => {
       <Card sx={Styles.editorCard}>
         <Box sx={Styles.editorBoxes}>
           <Card sx={[Styles.editorHead]} elevation={0}>
-            {/* <FormControl variant="outlined" sx={Styles.select}> */}
-            {/* <InputLabel id="demo-simple-select-label" sx={{ color: "#fff" }}>
-                Language
-              </InputLabel> */}
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
